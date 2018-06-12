@@ -1,0 +1,29 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+version = '1.0'
+
+sourceCompatibility = JavaVersion.VERSION_1_8;
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.guava:guava:+'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+
+    compile 'org.glassfish.jaxb:jaxb-runtime:2.3.0.1'
+    //compile 'javax.xml.bind:jaxb-api:2.3.0'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+idea {
+    module {
+        outputDir file('build/idea/main')
+        testOutputDir file('build/idea/test')
+    }
+}
