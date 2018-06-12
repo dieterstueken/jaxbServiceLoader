@@ -1,12 +1,12 @@
 package de.dst.jaxb.service;
 
-import com.sun.istack.Nullable;
-import com.sun.xml.bind.api.JAXBRIContext;
-import com.sun.xml.bind.v2.model.annotation.Locatable;
-import com.sun.xml.bind.v2.model.annotation.LocatableAnnotation;
-import com.sun.xml.bind.v2.model.annotation.RuntimeAnnotationReader;
-import com.sun.xml.bind.v2.model.annotation.RuntimeInlineAnnotationReader;
-import com.sun.xml.bind.v2.model.core.ErrorHandler;
+import com.sun.istack.internal.Nullable;
+import com.sun.xml.internal.bind.api.JAXBRIContext;
+import com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+import com.sun.xml.internal.bind.v2.model.annotation.LocatableAnnotation;
+import com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader;
+import com.sun.xml.internal.bind.v2.model.annotation.RuntimeInlineAnnotationReader;
+import com.sun.xml.internal.bind.v2.model.core.ErrorHandler;
 
 import javax.xml.bind.annotation.XmlSeeAlso;
 import java.lang.annotation.Annotation;
