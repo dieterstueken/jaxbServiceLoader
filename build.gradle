@@ -12,7 +12,6 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.+'
     compile 'org.glassfish.jaxb:jaxb-runtime:2.3.0.1'
-    compile 'javax.xml.bind:jaxb-api:2.3.0'
     runtime 'javax.activation:activation:+'
 }
 
