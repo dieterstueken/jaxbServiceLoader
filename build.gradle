@@ -15,11 +15,15 @@ dependencies {
     //compile 'javax.xml.bind:jaxb-api:2.3.0'
 }
 
-compileJava {
-    options.fork = true
+tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
-    options.forkOptions.executable = "javac"
+
+    // enable access to sun.internal classes
     options.compilerArgs << "-XDignore.symbol.file"
+    
+    // needs a forked compiler for additional compiler args
+    options.fork = true
+    options.forkOptions.executable = "javac"
 }
 
 idea {
