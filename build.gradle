@@ -15,8 +15,11 @@ dependencies {
     //compile 'javax.xml.bind:jaxb-api:2.3.0'
 }
 
-tasks.withType(JavaCompile) {
+compileJava {
+    options.fork = true
     options.encoding = 'UTF-8'
+    options.forkOptions.executable = "javac"
+    options.compilerArgs << "-XDignore.symbol.file"
 }
 
 idea {
